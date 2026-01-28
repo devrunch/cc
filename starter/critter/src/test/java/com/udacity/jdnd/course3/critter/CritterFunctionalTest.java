@@ -23,8 +23,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
- * Functional tests for Critter Chronologer.
- * Updated to be Maven-safe and run successfully on Java 17.
+ * Integration tests validating the core Critter application behavior.
+ * Adapted to run with current Maven and Java toolchains.
  */
 @SpringBootTest(classes = CritterApplication.class)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
@@ -226,7 +226,7 @@ public class CritterFunctionalTest {
         compareSchedules(sched3, scheds2c.get(1));
     }
 
-    // --- Helpers ---
+    // Test helper methods and DTO factories
 
     private static EmployeeDTO createEmployeeDTO() {
         EmployeeDTO employeeDTO = new EmployeeDTO();

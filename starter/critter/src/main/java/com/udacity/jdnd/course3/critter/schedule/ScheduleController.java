@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Handles web requests related to Schedules.
+ * Schedule-related HTTP endpoints.
  */
 @RestController
 @RequestMapping("/schedule")

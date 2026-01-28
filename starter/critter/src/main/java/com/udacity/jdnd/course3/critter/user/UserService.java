@@ -48,14 +48,14 @@ public class UserService {
     public void setAvailability(Set<DayOfWeek> daysAvailable, Long employeeId) {
         Employee employee = employeeRepository.findById(employeeId).orElse(null);
         if (employee != null) {
-            employee.setDaysAvailable(daysAvailable);
+            employee.setAvailDay(daysAvailable);
             employeeRepository.save(employee);
         }
     }
 
     public List<Employee> findEmployeesForService(DayOfWeek day, Set<EmployeeSkill> skills) {
         // 1. Ask the database: "Who is free on this day?"
-        List<Employee> employeesOnDay = employeeRepository.findAllByDaysAvailable(day);
+        List<Employee> employeesOnDay = employeeRepository.getAllByAvailDay(day);
 
         // 2. Filter the list: "Who also has the skills we need?"
         List<Employee> matchingEmployees = new ArrayList<>();

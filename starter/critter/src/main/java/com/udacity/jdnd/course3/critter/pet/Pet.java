@@ -19,8 +19,10 @@ public class Pet implements Serializable {
     private String name;
     private PetType type;
 
-    @ManyToOne(targetEntity = Customer.class, optional = false)
     private String notes;
+
+    @ManyToOne(targetEntity = Customer.class, optional = false)
     private Customer customer;
+
     private LocalDate birthDate;
 }

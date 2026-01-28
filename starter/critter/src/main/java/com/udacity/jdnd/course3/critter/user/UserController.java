@@ -11,8 +11,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * Handles web requests related to Users.
- *
+ * User-related HTTP endpoints.
+ 
  * Includes requests for both customers and employees. Splitting this into separate user and customer controllers
  * would be fine too, though that is not part of the required scope for this class.
  */
